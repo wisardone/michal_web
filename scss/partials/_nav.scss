@@ -1,0 +1,88 @@
+.menu-button {
+    position: absolute;
+    top: 3em;
+    left: 3em;
+    background: transparent;
+    border: 0;
+    
+    
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 15%;
+    z-index: 10;
+    
+    transform: translateX(-100%);
+    transition: transform ease-out 250ms;
+    
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: stretch;
+    background: $old-green;
+    
+}
+nav li{
+    
+    text-align: center;
+    
+    &not(:last-of-type){     /// to wyklucza ostatnie podkreslenie jakie zrobilem
+    border-bottom: 1px solid $middle-yellow-red;
+    }
+}
+nav li:hover{
+    background: $dark-old-green;
+}
+
+nav a {
+    display: inline-block;
+    @include sans-serif($fs: 1.5rem, $color: $middle-yellow-red);
+    text-decoration: none;
+    padding: calc(100vh/10) 0; // super funkca !! podzieliem cal wysokosc na 8 rownych czesci aby ywsrodkowac i zrobic pole dla elementow nav :)  plus line-height na 0 :) 
+    line-height: 0;
+    width: 100%;
+    
+    
+}
+.close-icon {
+    display: none;
+}
+.nav-is-open {              // to co sie dzieje kiedy nav jest otwarte
+                    
+    height: 100vh;  // dotyczy to tutaj body i overlow-y zapobiegnie scrollowanoi w dol jak jest otwarte
+    overflow-y: hidden
+     
+    
+    nav {
+        transform: translateX(0);
+    }
+    
+    body & 
+    .container-all {
+        transform: translateX(80%);
+        
+    }
+    
+    .hamburger{
+        display: none;
+    }
+    .close-icon {
+        display: block;
+    }
+    
+    .menu-button {
+       transform: translateX(-70%); //aby krzyzyk wypozycjonowac 
+        transition: transform easy-in 100ms;
+    }
+}
+

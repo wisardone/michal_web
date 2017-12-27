@@ -1,0 +1,41 @@
+body {
+  color: $gray;
+  font-family: $ff-s;
+  line-height: 1.6;
+  background: $white;
+  font-size: .875rem;
+  overflow-x: hidden; // dzieki temu slidebar nam nie bedzie sie pojawial przy wyciaganiu nav
+    
+    
+    @include mq {
+        font-size: 1.125rem;
+    }
+  
+}
+
+img{
+    max-width: 100vh;
+}
+h1, h2, p {
+    margin-top: 0; 
+    margin-bottom: 1em;
+}
+h1{
+    color: $middle-yellow-red;
+    line-height: 1;
+    font-size: 3.125rem;
+    @include mq {
+        font-size: 4.35rem;
+    }
+    
+  
+}
+
+h2{
+    @include sans-serif($fs: 2rem);
+    @include mq {
+        font-size: 3rem;
+    }
+    
+}
+

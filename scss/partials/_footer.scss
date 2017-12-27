@@ -1,0 +1,41 @@
+footer {
+    background-color: $old-green;
+    padding: 4em 0;
+    text-align: center;
+   
+}
+
+.social-title {
+    font-family: $ff-ss;
+    letter-spacing: .2rem;
+    color: $middle-yellow-red;
+    font-weight: $fw-b;
+    font-size: 2.5em;
+}
+
+.social-icons {
+    @include container($max-width: 15em);
+    dispal: flex;
+    //justify-content: space-between;
+    margin: 2em auto 3em;
+    
+}
+.social-icon {
+    width: 45%;
+    height: 45%;
+}
+
+.copyright {
+    color: $middle-yellow-red;
+
+    
+    
+    &::before{
+        content: '';
+        display: block;
+        height: 1px;
+        width: 25%;
+        background: rgba( $middle-yellow-red, .15);
+        margin: 4em auto;
+    }
+}

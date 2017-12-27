@@ -1,0 +1,45 @@
+.certification {
+@include container($max-width: 75em);
+    padding: 5em 0;
+    width: 90%;
+    background-color: $white;
+
+  
+    
+    
+    .certification-title, .crtification-list{
+        text-align: center;
+    }
+    
+    
+}
+   
+.certification-title {
+    font-family: $ff-ss;
+    font-size: 4rem;
+    letter-spacing: .7rem;
+    margin-bottom: .5em;
+    
+    &:after{
+        content: '';
+        display: block;
+        width: 20%;
+        height: 2px;
+        background: $middle-yellow-red;
+        margin: .5em auto 0;
+    } 
+    
+}
+
+.certification-list{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: full-width;
+    padding: 2.5em 0;
+    color: $middle-yellow-red;
+    margin: 4em ;
+    list-style-position: inside;
+    list-style:inside;
+    line-height: 3;
+}
