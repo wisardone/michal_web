@@ -110,3 +110,134 @@
     
   }
 }
+
+.portfolio-modal {
+    position: fixed;
+    z-index: 10;
+    top: 2em;
+    bottom: 2em;
+    left: 2em;
+    right: 2em;
+    background: $white;
+    box-shadow: 0 0 0 3em rgba (black, .8);
+    overflow-y: scroll; // pozwala nam to scrollowac bo ma pozycje fixed
+    overflow-x: hidden; // zobacz do about me dla foty w tle zapobiega scrolowaniu w bok
+    
+    
+    display: none; // do skasowania
+    
+    &.is-open{
+        display: block;
+    }
+}
+
+.modal-close {
+    background: $white;
+    position: fixed;
+    left: 1em;
+    top: 1em;
+    border: 0;
+    width: 2em;
+    height: 2em;
+    padding: 4px 0 0;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(black, .4);
+    
+    
+}
+
+.portfolio-header {
+    text-align: left; 
+    padding: 5em 0;
+    margin-bottom: 2em;
+    background-size: cover;
+    background-position: center;
+  
+    
+}
+.header-one{
+    background-image: url(../img/family.jpg); // sprawdzic fote i jak dziala
+    
+}
+
+.header-two{
+    background-image: url(../img/tower.jpg)
+}
+
+.header-three {
+    background-image: url(../img/amusement_park.jpg)
+}
+.header-four {
+    background-image: url(../img/mom_and_son.jpg)
+}
+.header-five {
+    background-image: url(../img/search.jpg)
+}
+
+.portfolio-title-box {
+    background: rgba($old-green, .80);
+    padding: 3em 0 3em 3em;
+    width: 70%;
+   
+    .portfolio-title {
+    color: $white;
+    font-size: 3.5em;
+    display: inline-block;
+        
+        
+        &::after{
+            content: '';
+            display: block;
+            height: 1px;
+            margin: .5em 0;
+            background:$white;
+            width: 100%;
+        }
+}
+    
+}
+
+.portfolio-content {
+    text-align: left;
+    width: 85%;
+    margin: 0 auto;
+    padding-bottom: 2em;
+    
+}
+
+.portfolio-full-width {
+    width: 100vw;
+    max-width: initial;  // zobacz about me dla foty pod textem
+    //margin: 2em calc(50% - 50vw);  // popraw rozmiar foty aby moc ja rozciagnac po calosci
+    height: 20vh;
+    object-fit: cover; // zapogienie nam rozciagneiciu foty i jej zniszczeniu
+    
+    
+}
+
+@include mq {
+  .portfolio-pull-left {
+    width: 65%;
+    height: 40vh;
+    float: left;
+    margin-right: 2em;
+  }
+
+  .portfolio-pull-right {
+    width: 65%;
+    height: 40vh;
+    float: right;
+    margin-left: 2em;
+  }
+}
+
+@keyframes modalIn {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+
+@keyframes modalOut {
+    0% { opacity: 1;}
+    100% { opacity: 0;}
+}
