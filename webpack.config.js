@@ -4,12 +4,11 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   entry: [
-    'babel-polyfill',  
     './js/index.js',
     './scss/main.scss',
   ],
   output: {
-    filename: 'index.js', 
+    filename: 'index.js',
     libraryTarget: 'commonjs',
     path: path.resolve('./dist/'),
   },
@@ -21,7 +20,7 @@ module.exports = {
       },
       {
         test: /\.(sass|scss)$/,
-        loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader','babel-loader']),
+        loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader']),
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
@@ -34,18 +33,16 @@ module.exports = {
           }
         ]
       },
-        {
-      test: /\.js$/,
-      exclude: /(node_modules|bower_components)/,
-      use: {
-        loader: 'babel-loader',
-        options: {
-          presets: ['@babel/preset-env']
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
         }
-      }
-    },
-   
-        
+      },
     ]
   },
   plugins: [
