@@ -1,6 +1,7 @@
 const path = require('path') 
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: [
@@ -9,11 +10,14 @@ module.exports = {
   ],
   output: {
     filename: 'index.js',
-    libraryTarget: 'commonjs',
     path: path.resolve('./dist/'),
   },
   module: {
     rules: [
+      {
+        test: /\.html$/,
+        loader: 'html-loader',
+      },
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract(['css-loader']),
@@ -46,6 +50,9 @@ module.exports = {
     ]
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      template: './index.html',
+    }),
     new webpack.optimize.UglifyJsPlugin({
       output: {
         comments: false
