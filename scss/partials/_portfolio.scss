@@ -55,15 +55,21 @@
     
 }
 
+ .featured{
+    .portfolio-title {
+      font-size: 2rem;
+    }
+  
     
+  }    
 
 .portfolio-title {
     color: white;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin-bottom: auto;
     
     .featured & {
-        font-size: 5rem;
+        font-size: 3.5rem;
         text-align: left;
     }
     
@@ -102,14 +108,7 @@
     grid-row: 1 / span 2;
   }
 
-  .featured{
-    .portfolio-title {
-      font-size: 5rem;
-    }
-  
-    
-  }
-}
+ 
 
 .portfolio-modal {
     position: fixed;
@@ -157,22 +156,22 @@
     
 }
 .header-one{
-    background-image: url(../img/family.jpg); // sprawdzic fote i jak dziala
+    background-image: url(../img/satelite_square.jpg); // sprawdzic fote i jak dziala
     
 }
 
 .header-two{
-    background-image: url(../img/tower.jpg)
+    background-image: url(../img/flower_square.jpg)
 }
 
 .header-three {
-    background-image: url(../img/amusement_park.jpg)
+    background-image: url(../img/plane_in_the_middle_of_the_forest_square.jpg)
 }
 .header-four {
-    background-image: url(../img/mom_and_son.jpg)
+    background-image: url(../img/happiness_square.jpg)
 }
 .header-five {
-    background-image: url(../img/search.jpg)
+    background-image: url(../img/mountain_road_square.jpg)
 }
 
 .portfolio-title-box {
@@ -218,14 +217,14 @@
 
 @include mq {
   .portfolio-pull-left {
-    width: 65%;
+    width: 40%;
     height: 40vh;
     float: left;
     margin-right: 2em;
   }
 
   .portfolio-pull-right {
-    width: 65%;
+    width: 40%;
     height: 40vh;
     float: right;
     margin-left: 2em;
@@ -240,4 +239,4 @@
 @keyframes modalOut {
     0% { opacity: 1;}
     100% { opacity: 0;}
-}
+    } }
