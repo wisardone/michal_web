@@ -8,11 +8,14 @@
      &::after {
        content: '';
        width: 20%;
-       height: 1px;
+       height: 2px;
        background: rgba($zomp, .5);
        display: block;
        margin: 1em auto 0
      }
+       @media (max-width: 320px) {
+           font-size: 2.8rem;
+       }
    }
    
     p{

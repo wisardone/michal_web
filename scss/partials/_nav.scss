@@ -10,7 +10,7 @@
 }
 
 nav {
-  position: absolute;
+  position: absolute; /// sprw
   top: 0;
   bottom: 0;
   left: 0;
@@ -58,35 +58,41 @@ nav li:hover {
 nav a {
   @include sans-serif($fs: 1.5rem, $color: $middle-yellow-red);
   text-decoration: none;
+    @media(min-width: 1024px){
+        font-size: 4rem;
+    }
 }
 
 .close-icon {
   display: none;
 }
 
-.nav-is-open {
-  height: 100vh;
-  overflow-y: hidden;
-
-  nav {
-    transform: translateX(0);
-  }
-
-  .container-all {
-    transform: translateX(80%);
-  }
-
-  .hamburger {
-    display: none;
-  }
-
-  .close-icon {
+.hamburger {
     display: block;
-  }
+}
+.nav-is-open {
+      height: 100vh;
+      overflow-y: hidden;
 
-  .menu-button {
-    transform: translateX(-70%);
-  }
+      nav {
+        transform: translateX(0);
+      }
+
+      .container-all {
+        transform: translateX(80%);
+      }
+
+      .hamburger {
+        display: none;
+      }
+
+      .close-icon {
+        display: block;
+      }
+
+      .menu-button {
+        transform: translateX(-70%);
+      }
 }
 
 .container-all {

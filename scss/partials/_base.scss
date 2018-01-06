@@ -39,3 +39,139 @@ h2{
     
 }
 
+@media (orientation: portrait) {
+    h1.about-title {
+        font-weight: 900;
+       
+    }
+    a.portfolio-link {
+        font-size: .9rem;
+    }
+    
+    p.social-title{
+        font-size: 3rem;
+        
+    }
+    
+    img.social-icon {
+        width: 65%;
+        height:65%;
+    }
+    
+    
+}
+
+@media (orientation: landscape){
+    
+    
+    img.social-icon {
+        width: 65%;
+        height:65%;
+    }
+    
+}
+
+@media (min-width :530px){
+    a.portfolio-link {
+        font-size: .7rem;
+    }
+    
+    h2.portfolio-title {
+        font-size: 1.4rem;
+    
+    }
+    h2.featured  {
+        font-size: 2.5rem;
+    }
+    
+    p.social-title{
+        font-size: 3rem;
+        
+    }
+}
+
+@media (min-width :530px) and (orientation: portrait){
+    
+}
+
+
+@media (min-width :768px){}
+
+@media (min-width :768px) and (orientation: portrait){
+    
+     a.portfolio-link {
+        font-size: .9rem;
+    }
+    
+    h2.portfolio-title {
+        font-size: 2rem;
+    
+    }
+    h1.portfolio-main-name{
+        font-size: 5rem;
+    }
+    img.social-icon {
+        width: 75%;
+        height: 75%;
+    }
+}
+
+
+@media (min-width :1024px){
+    a.portfolio-link {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width :1024px) and (orientation: portrait){
+    
+}
+@media (min-width :1280px){}
+
+@media (min-width :1280px) and (orientation: portrait){
+    
+}
+
+
+
+@media (min-width :1600px){}
+
+@media (min-width :1600px) and (orientation: portrait){
+    
+}
+
+
+@media (max-width: 320px) { 
+
+    h1.welcome{
+    font-size: .8rem;
+    letter-spacing: .2rem;
+    
+        }
+    
+    
+   h1 span.welcome  {
+        font-size: 3rem;
+        letter-spacing: .8rem;
+      
+    
+        } 
+    h2.intro {
+        font-size: 3rem;
+    }
+    
+    h2.portfolio-title {
+        font-size: 1.2rem;
+    }
+    
+    h1.about-title {
+        font-size: 2.679rem;
+    }
+    a.portfolio-link {
+        font-size: .7rem;
+    }
+    p.social-title{
+        font-size: 2rem;
+    }
+}
+

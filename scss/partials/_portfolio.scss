@@ -17,6 +17,7 @@
   color: $middle-yellow-red;
   font-size: 4rem;
   letter-spacing: .4rem;
+  font-weight: 800;
   
  
 
@@ -27,7 +28,7 @@
     overflow: hidden;
     flex: 1 1 20rem;
     
-    img {
+    .portfolio-image {
         display: block;
         width: 100%;
     }
@@ -58,6 +59,8 @@
  .featured{
     .portfolio-title {
       font-size: 2rem;
+        
+        
     }
   
     
@@ -68,13 +71,24 @@
     font-size: 1.5rem;
     margin-bottom: auto;
     
+    
+    
     .featured & {
         font-size: 3.5rem;
         text-align: left;
+        
+        @media (min-width: 530px)and(max-width: 568px) {
+     
+       font-size: 2.5rem;
+       } 
+        
+        @media (min-width :768px) and (orientation: portrait){
+            font-size: 4.5rem;
+        }
     }
     
+    
 }
-
 .portfolio-link {
         color: white;
         font-weight: $fw-b;
@@ -82,6 +96,7 @@
         text-decoration: none;
         border-bottom: 3px solid white;
         align-self: flex-start;
+        text-align: left;
     
     
     &::after {
@@ -90,17 +105,23 @@
         height: .8em;
         width: .8em;
         margin-left: .5em;
+        
+            
+        } 
     }
-    }
+    
 
 @supports (display: grid) {
   .portfolio-items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
-    @include mq {
+    @include mq  {
       grid-template-columns: repeat(4, 1fr);
     }
+      @media (orientation: landscape){
+         grid-template-columns: repeat(4, 1fr); 
+      }
   }
   
   .portfolio-item.featured {
@@ -118,7 +139,7 @@
     left: 2em;
     right: 2em;
     background: $white;
-    box-shadow: 0 0 0 3em rgba (black, .8);
+    box-shadow: 0 0 0 3em rgba(black, .5);
     overflow-y: scroll; // pozwala nam to scrollowac bo ma pozycje fixed
     overflow-x: hidden; // zobacz do about me dla foty w tle zapobiega scrolowaniu w bok
     
@@ -185,6 +206,7 @@
     display: inline-block;
         
         
+        
         &::after{
             content: '';
             display: block;
@@ -193,6 +215,10 @@
             background:$white;
             width: 100%;
         }
+        
+    
+
+
 }
     
 }
@@ -208,29 +234,54 @@
 .portfolio-full-width {
     width: 100vw;
     max-width: initial;  // zobacz about me dla foty pod textem
-    //margin: 2em calc(50% - 50vw);  // popraw rozmiar foty aby moc ja rozciagnac po calosci
+    margin: 2em calc(50% - 50vw);  // popraw rozmiar foty aby moc ja rozciagnac po calosci
     height: 20vh;
     object-fit: cover; // zapogienie nam rozciagneiciu foty i jej zniszczeniu
+    margin-bottom: 2em;
     
     
 }
+    
+    @media (min-width: 320px){
+  .portfolio-full-width-two {
+    width: 100vw;
+    max-width: initial;  
+    margin: 2em calc(50% - 50vw);  
+    height: 20vh;
+    object-fit: cover;
+    margin-bottom: 2em;
+  }
 
+  .portfolio-full-width-three {
+    width: 100vw;
+    max-width: initial;  
+    margin: 2em calc(50% - 50vw);  
+    height: 20vh;
+    object-fit: cover;
+    margin-bottom: 2em;
+  }
+    }
 @include mq {
-  .portfolio-pull-left {
-    width: 40%;
-    height: 40vh;
-    float: left;
-    margin-right: 2em;
+  .portfolio-full-width-two {
+    width: 100vw;
+    max-width: initial;  
+    margin: 2em calc(50% - 50vw);  
+    height: 20vh;
+    object-fit: cover;
+    margin-bottom: 2em;
   }
 
-  .portfolio-pull-right {
-    width: 40%;
-    height: 40vh;
-    float: right;
-    margin-left: 2em;
+  .portfolio-full-width-three {
+    width: 100vw;
+    max-width: initial;  
+    margin: 2em calc(50% - 50vw);  
+    height: 20vh;
+    object-fit: cover;
+    margin-bottom: 2em;
   }
 }
-
+    
+    
 @keyframes modalIn {
     0% { opacity: 0;}
     100% { opacity: 1;}

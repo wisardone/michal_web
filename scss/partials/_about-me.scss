@@ -8,8 +8,12 @@
     
     .about-img {
         max-height: 25em;
-        //border-radius: 1%;
-        @media (min-width: 42em) {
+        border-radius: 1%;
+       // @media (min-width: 42em) {
+           // float: left;
+          //  margin-right: .5em;
+      //  }
+        @media (orientation: landscape){
             float: left;
             margin-right: .5em;
         }
@@ -26,6 +30,7 @@
     }
 .about-title {
     color: $middle-yellow-red;
+    font-weight: 900;
     
 
 }
@@ -49,30 +54,44 @@
         .about-img {
             grid-column: port / img ;
             grid-row: 1 / 2 ;
+            
+            
             @include mq {
                 grid-row: 1 / 4 ;
             }
+            
+           
         }
         .about-title {
             grid-column: name / port ;
             grid-row: 1 / 2;
-            align-self: end;
+            
         }
         .about-subtitlle,
         .about-text {
             grid-column: port / port ;
+            
+            
+            
             @include mq {
                 grid-column: img-end / port-end;
             }
+            
         }
         
         .about-subtitlle {
             grid-row: 2 / 3; 
+            
+            
+            
+            
         }
         
 
         .about-text { 
             grid-row: 3 / 4; 
+            
+           
         }
            
     
