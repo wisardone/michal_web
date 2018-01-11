@@ -7,6 +7,7 @@
   transition: transform ease-in-out 250ms;
   cursor: pointer;
   outline: none;
+  z-index: 10;
 }
 
 nav {
@@ -47,7 +48,7 @@ nav li {
   text-align: center;
 
   &:not(:last-of-type) {
-    border-bottom: 1px solid $middle-yellow-red;    
+    border-bottom: 1px solid $middle-yellow-red;
   }
 }
 

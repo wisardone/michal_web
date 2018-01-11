@@ -32,13 +32,15 @@
         .logo {
        //height: 100px;
        width: 100%;
-       position: absolute;
-       top: 50%;
+       position: relative;
+       top: 30%;
        margin-top: -50px;
+       margin-bottom: -200px;
+       
 
        
        h1 {
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: $fw-n;
     color: $gray;
     line-height: 2;
@@ -46,13 +48,13 @@
     letter-spacing: .2rem;
     
     @include mq {
-        font-size: 3vw;
+        font-size: 1.5vw;
     }
     
     
     
     span{
-        @include sans-serif( $fs: 5.8rem, $ls: 1.8rem, $color: $middle-yellow-red);
+        @include sans-serif( $fs: 4.8rem, $ls: 1.8rem, $color: $middle-yellow-red);
        display: block;
         
     
@@ -62,7 +64,7 @@
     }   letter-spacing: .9rem;
         
             @include mq {
-        font-size: 10vw;
+        font-size: 7.5vw;
     }
         
     } 
@@ -70,7 +72,7 @@
     &:after{
         content: '';
         display: block;
-        width: 30%;
+        width: 25%;
         height: 2px;
         background: $middle-yellow-red;
     } 
@@ -82,7 +84,11 @@
     &::after{
        margin: 1em auto 0; 
     }
-       }}
+       }
+        
+           
+        
+        }
 
 
         
@@ -95,8 +101,14 @@
             background-position: right bottom; 
             position: absolute;
             left: 50%;
-            margin-left: -250px; // min-width 1024 and up
-            top: 480px;          // min-width 1024 and up
+            margin-left: -200px; // min-width 1024 and up
+            top: 420px;          // min-width 1024 and up
+            
+            @media (max-width: 320px) {
+               // width: 120px;
+               // height:300px;
+                margin-left: -480px;
+            }
         }
         
         .birds {

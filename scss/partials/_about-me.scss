@@ -4,7 +4,22 @@
         margin-top: 5em;
         //margin-bottom: 5em;
         //background-color: $rich-white;
+            
+          .about-group {
+                position: relative;
+                opacity: 0;
+                transform: translateX(-20px);
+                transition: all 0.3s ease-in-out; 
+
+            &.is-showing{
+                opacity: 1;
+                transform: translateX(0px);
+            }
     }
+            
+    }
+
+
     
     .about-img {
         max-height: 25em;
