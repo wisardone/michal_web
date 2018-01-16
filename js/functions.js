@@ -3,6 +3,7 @@
 var pContainerHeight = document.querySelector('.dron-box').offsetHeight;
  
 window.addEventListener('scroll', function (){
+    
     var wScroll = this.pageYOffset;
     if(wScroll <= pContainerHeight){
        
@@ -22,7 +23,7 @@ window.addEventListener('scroll', function (){
     
     var figures = document.querySelectorAll('.about-me .about-group');
 
-  function showPic(i) {
+  function showEl(i) {
     setTimeout(function(){
       figures[i].classList.add('is-showing');
     }, (700 * (Math.exp(i * 0.14)) - 700));
@@ -31,8 +32,8 @@ window.addEventListener('scroll', function (){
   if(wScroll > document.querySelector('.about-me').scrollHeight + document.body.scrollTop - (window.innerHeight / 1.2)) {
 
     for(var i = 0; i < figures.length; i++) {
-      showPic(i);
-    }
+      showEl(i);
+    } 
 
   }
     
