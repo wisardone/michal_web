@@ -19,9 +19,9 @@ window.addEventListener('scroll', function (){
  
     }
     
-    // about-me
+    // about-me experyment
     
-    var figures = document.querySelectorAll('.about-me .about-group');
+   /* var figures = document.querySelectorAll('.portfolio-items figure');
 
   function showEl(i) {
     setTimeout(function(){
@@ -29,13 +29,13 @@ window.addEventListener('scroll', function (){
     }, (700 * (Math.exp(i * 0.14)) - 700));
   }
 
-  if(wScroll > document.querySelector('.about-me').scrollHeight + document.body.scrollTop - (window.innerHeight / 1.2)) {
+  if(wScroll > document.querySelector('.portfolio-items').scrollHeight + document.body.scrollTop - (window.innerHeight / 1.2)) {
 
     for(var i = 0; i < figures.length; i++) {
       showEl(i);
     } 
 
-  }
+  } */
     
     
     

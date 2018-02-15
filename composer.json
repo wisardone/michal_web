@@ -1,0 +1,12 @@
+{
+    "name": "niemiec/michal_web",
+    "require": {
+        "monolog/monolog": "^1.23"
+    },
+    "authors": [
+        {
+            "name": "wisardone",
+            "email": "wisardone@gmail.com"
+        }
+    ]
+}

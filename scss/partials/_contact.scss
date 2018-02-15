@@ -8,8 +8,28 @@
         text-align: center;
         color: $zomp;
         font-weight: 900;
+       opacity: 0;
+        transform: translateY(-1.5rem) scale(.2);
+        transition: transform 3s .34s cubic-bezier(.88,1.74,.42,.99);
+    }
+    
+    h1.is-visible {
+        opacity:1;
+        transform: none;
     }
 }
+
+form {
+    transform: /*translateY(4rem)*/ translate(-20rem) scale(.2);
+        transition: transform 2.5s .35s cubic-bezier(.65,1.54,.52,1),
+              opacity .9s .25s ease-out;
+}
+
+form.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
 
 form {
     display: flex;
@@ -36,11 +56,14 @@ form {
 
         .message {
           grid-area: message;
+           
           textarea {
             height: 10em;
+              
           }
         }
 
+        
         .button {
           grid-area: button;
         }
@@ -52,6 +75,7 @@ label {
     display: block;
     margin-top: 1em;
     color:$queen-blue;
+    
 }
 
 input, textarea {
@@ -75,4 +99,11 @@ input, textarea {
     border: none;
     @include sans-serif ($fs: 2.5rem, $color: $white);
     padding: .5em 1.5em;
+    transform: translateZ(-20rem) translate(20rem) scale(.2);
+        transition: transform 2s .35s cubic-bezier(.88,1.74,.42,.99);
+         opacity: 0;
+}
+.button.is-visible {
+    opacity:1;
+    transform: none;
 }

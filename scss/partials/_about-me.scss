@@ -2,20 +2,13 @@
         @include container;
         @include clearfix;
         margin-top: 5em;
+       
+      
+        
         //margin-bottom: 5em;
         //background-color: $rich-white;
-            
-          .about-group {
-                position: relative;
-                opacity: 0;
-                transform: translateX(-20px);
-                transition: all 0.3s ease-in-out; 
+    
 
-            &.is-showing{
-                opacity: 1;
-                transform: translateX(0px);
-            }
-    }
             
     }
 
@@ -24,10 +17,13 @@
     .about-img {
         max-height: 25em;
         border-radius: 1%;
-       // @media (min-width: 42em) {
-           // float: left;
-          //  margin-right: .5em;
-      //  }
+        opacity: 0;
+        transform: /*translateY(4rem)*/ translate(-20rem) scale(.2);
+        transition: transform 2.5s .35s cubic-bezier(.65,1.54,.52,1),
+              opacity .9s .25s ease-out;
+        z-index: 1;
+         
+    
         @media (orientation: landscape){
             float: left;
             margin-right: .5em;
@@ -37,12 +33,30 @@
     .about-title {
         margin-bottom: .25em;
         color: $middle-yellow-red;
+        z-index: 10;
+        opacity: 0;
+        transform: translateY(-1.5rem) scale(.2);
+        transition: transform 3s .34s cubic-bezier(.88,1.74,.42,.99);
+            
+        
     }
     
     .about-subtitlle {
         margin: .5em 0;
-        
+        transform: translateZ(-20rem) translate(20rem) scale(.2);
+        transition: transform 2.5s .30s cubic-bezier(0,1.54,.42,.99);
+         opacity: 0;
+            
+       
     }
+.about-text {
+    transform: translateZ(-20rem) translate(20rem) scale(.2);
+        transition: transform 2.5s .30s cubic-bezier(0,1.54,.42,.99);
+         opacity: 0;
+            
+}
+
+
 .about-title {
     color: $middle-yellow-red;
     font-weight: 900;
@@ -59,12 +73,24 @@
 .about-text {
     color: $gray;
 }
+
+.about-img.is-visible,
+.about-title.is-visible,
+.about-subtitlle.is-visible,
+.about-text.is-visible {
+    
+    opacity: 1;
+    transform: none;
+}
+
+
     
     @supports (display: grid) {
         .about-me {
             display: grid;
             grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
             grid-column-gap: .2em;
+            
         }
         .about-img {
             grid-column: port / img ;
@@ -81,6 +107,7 @@
             grid-column: name / port ;
             grid-row: 1 / 2;
             
+           
         }
         .about-subtitlle,
         .about-text {
@@ -112,3 +139,4 @@
     
 }
 
+ 

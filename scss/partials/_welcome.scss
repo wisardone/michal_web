@@ -36,6 +36,7 @@
        top: 30%;
        margin-top: -50px;
        margin-bottom: -200px;
+    
        
 
        
@@ -46,9 +47,10 @@
     line-height: 2;
     text-align: center;
     letter-spacing: .2rem;
+    animation-delay: 1s;
     
     @include mq {
-        font-size: 1.5vw;
+        font-size: 2.5vw;
     }
     
     
@@ -56,6 +58,7 @@
     span{
         @include sans-serif( $fs: 4.8rem, $ls: 1.8rem, $color: $middle-yellow-red);
        display: block;
+        animation-delay: 1.4s;
         
     
         
@@ -63,8 +66,12 @@
         font-size: 4.5rem;
     }   letter-spacing: .9rem;
         
+        @media (max-width: 360px) {
+        font-size: 15.5vh;
+    }   letter-spacing: .9rem;
+        
             @include mq {
-        font-size: 7.5vw;
+        font-size: 9.5vw;
     }
         
     } 
@@ -72,17 +79,27 @@
     &:after{
         content: '';
         display: block;
-        width: 25%;
+        width: 45%;
         height: 2px;
         background: $middle-yellow-red;
+        
+        @media (max-width: 320px) {
+        width: 40%;
+        
+    } 
+         @include mq {
+        width: 25%;
+    }
     } 
     
     &::before {
         margin: 0 auto .5em;
+        animation-delay: .6s;
     }
    
     &::after{
        margin: 1em auto 0; 
+       animation-delay: .6s;
     }
        }
         
@@ -90,7 +107,10 @@
         
         }
 
-
+.animate-pop-in {
+  animation: pop-in 2.5s cubic-bezier(.85,1.54,.52,1) forwards;
+  opacity: 0;
+}
         
         .drone {
             width: 960px;
@@ -103,11 +123,18 @@
             left: 50%;
             margin-left: -200px; // min-width 1024 and up
             top: 420px;          // min-width 1024 and up
-            
+           
             @media (max-width: 320px) {
                // width: 120px;
                // height:300px;
                 margin-left: -480px;
+            }
+            
+            @media (max-width: 360px) {
+               // width: 120px;
+               // height:300px;
+                margin-left: -510px;
+                top: 520px;
             }
         }
         
@@ -121,13 +148,34 @@
             left: 50%;
             margin-left: -480px;  // min-width 1024 and up
             bottom: 164px;        // min-width 1024 and up
+             animation-delay: .5s;
             
+             @media (max-width: 320px) {
+               // width: 120px;
+               // height:300px;
+                margin-left: -280px;
+            }
+            
+            @media (max-width: 360px) {
+                margin-left: -360px;
+            }
         }
     }
     
-   
+
 
 //}//
 
-
+/*Animations*/
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20rem) scale(.2);
+    
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
 

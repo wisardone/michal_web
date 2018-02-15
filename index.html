@@ -14,7 +14,7 @@
   <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
 </head>
 
-<body class="nav-is-open">
+<body>
  
  <!--NAV-->
  <nav>
@@ -64,10 +64,10 @@
       </button>
     
 
-   <div class="birds"></div>
+   <div class="birds animate-pop-in"></div>
    
    <div class="logo"> 
-   <h1>Security Engineer<span>MICHAL</span></h1>
+   <h1 class="animate-pop-in">Security Engineer<span class="animate-pop-in">MICHAL</span></h1>
    </div> 
    
 
@@ -86,7 +86,7 @@
       <img src="img/welcome1.png" alt="a vintage typewriter">
     </div>
     <div class="intro-middle">
-      <h2>Making it happen</h2>
+      <h2>Make it happen</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula porta semper. Praesent quis placerat velit.</p>
     </div>
     <div class="intro-right">
@@ -94,23 +94,25 @@
     </div>
   </section>
   <!--ABOUT ME SECTION-->
-  <section class="about-me" id="about">
-    <img class="about-img" class= "about-group" src="img/man_and_landscape.png" alt="a picture of man with mountains">
-    <h1 class="about-title" class= "about-group">MICHAL WEBSITE</h1>
-    <h2 class="about-subtitlle" class= "about-group">SECURITY ENGINEER</h2>
-    <div class="about-text" class= "about-group">
+  <section  class="about-me" id="about">
+   
+    <img class="about-img show-on-scroll about-group"  src="img/man_and_landscape.png" alt="a picture of man with mountains">
+    <h1 class="about-title show-on-scroll about-group">MICHAL WEBSITE</h1>
+    <h2 class="about-subtitlle show-on-scroll about-group">SECURITY ENGINEER</h2>
+    <div class="about-text show-on-scroll about-group">
       <p>Solution-oriented IT Security Engineer with comprehensive data and network experience. Experienced in Data Leakage Protection, DDoS.</p>
       <p>Countermeasures, security analysis, and wireless security. Proven knowledge in implementing innovative security’s solutions that manage advanced persistent threats. Hands-on skills in profiled penetration testing for corporate clients</p>
-    </div>
+       </div>
+      
   </section>
   <!--OFFER SECTION-->
-  <section class="portfolio" id="portfolio">
+  <section class="portfolio show-on-scroll" id="portfolio">
 
     <h1 class="portfolio-main-name">I CAN OFFER YOU</h1>
     <div class="portfolio-items">
 
       <!-- OFFER item 1-->
-      <figure class="portfolio-item featured">
+      <figure class="portfolio-item featured show-on-scroll">
         <img class="portfolio-image" src="img/satelite_square.jpg" alt="a satelite above mars">
         <figcaption>
           <h2 class="portfolio-title">COMPLACENCY</h2>
@@ -150,7 +152,7 @@
        <!--/modal-->
       </figure>
       <!-- OFFER item 2-->
-      <figure class="portfolio-item">
+      <figure class="portfolio-item  show-on-scroll">
         <img class="portfolio-image" src="img/flower_square.jpg" alt="a exotic flower">
         <figcaption>
           <h2 class="portfolio-title">PEACEFUL SLEEP</h2>
@@ -187,7 +189,7 @@
        
       </figure>
       <!-- OFFER item 3-->
-      <figure class="portfolio-item">
+      <figure class="portfolio-item show-on-scroll">
         <img class="portfolio-image" src="img/plane_in_the_middle_of_the_forest_square.jpg" alt="a plane in the middle of the forest">
         <figcaption>
           <h2 class="portfolio-title">FREEDOM OF ACTION</h2>
@@ -224,7 +226,7 @@
        <!--/modal-->
       </figure>
       <!-- OFFER item 4-->
-      <figure class="portfolio-item">
+      <figure class="portfolio-item show-on-scroll">
         <img class="portfolio-image" src="img/happiness_square.jpg" alt="a awesome lanscape">
         <figcaption>
           <h2 class="portfolio-title">HAPPINESS OF LIFE</h2>
@@ -262,7 +264,7 @@
         
       </figure>
       <!-- OFFER item 5-->
-      <figure class="portfolio-item">
+      <figure class="portfolio-item show-on-scroll">
         <img class="portfolio-image" src="img/mountain_road_square.jpg" alt="a mountain road">
         <figcaption>
           <h2 class="portfolio-title">A NEW SOLUTIONS</h2>
@@ -302,9 +304,9 @@
     </div>
   </section>
   <!--certification-->
-  <section class="certification" id="certification">
-    <h1 class="certification-title">Certification</h1>
-    <div class="certification-list">
+  <section class="certification show-on-scroll" id="certification">
+    <h1 class="certification-title show-on-scroll">Certification</h1>
+    <div class="certification-list show-on-scroll">
       <p>eWPTX eLearnSecurity Advanced Web Application Penetration Tester,EWPTX-41</p><br>
         <p>eWPT - eLearnSecurity Web Application Penetration Tester EWPT-178</p><br>
           <p>eCPPT - eLearnSecurity Certified Professional Penetration Tester, G-213</p><br>
@@ -313,21 +315,22 @@
       </div>
   </section>
   <!-- contact section-->
-  <section class="contact" id="contact">
-    <h1>Contact me</h1>
-    <form action="">
-      <label class="name" class="name">Name:
-    <input type="text" id="name">
+  <section class="contact show-on-scroll" id="contact">
+    <h1 class="show-on-scroll">Contact me</h1>
+    <form action=""  method="post" class="show-on-scroll">
+      <label class="name" >Name:
+    <input type="text" id="name" name ="user_name" >
     </label>
 
-      <label class="email" class="email">Email:
-    <input type="email" id="email">
+      <label class="email">Email:
+    <input type="email" id="email"  name="user_email" class="show-on-scroll">
     </label>
+     
       <label message="message" class="message">Message:
-      <textarea name="" id="message"></textarea>
+      <textarea  id="message" name="user_message"class="show-on-scroll"></textarea>
       </label>
       
-      <input  class="button form button" type="submit" value="SEND">
+      <input  class="button form button show-on-scroll" type="submit" value="SEND">
     </form>
 
   </section>
@@ -342,6 +345,7 @@
   </footer>
     </div>
     
+
 </body>
 
 </html>
